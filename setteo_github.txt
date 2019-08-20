@@ -1,0 +1,22 @@
+git push -u origin master
+remote: Permission to bsidorukmeli/testing.git denied to barsidoruk.
+fatal: no es posible acceder 'https://github.com/bsidorukmeli/testing.git/':The requested URL returned error: 403
+
+git config user.name
+git config --global user.name "barbiquilmes"
+
+git config user.email
+git config --global user.email "basidoruk@gmail.com"
+
+git remote -v
+git remote set-url origin https://github.com/barbiquilmes/testing.git
+
+ssh-keygen -t rsa -b 4096 -C "basidoruk@gmail.com"
+eval "$(ssh-agent -s)"
+vim ~/.ssh/config
+ssh-add -K ~/.ssh/id_rsa
+pbcopy < ~/.ssh/id_rsa.pub
+-->https://github.com/settings/keys
+
+https://help.github.com/en/articles/connecting-to-github-with-ssh
+
